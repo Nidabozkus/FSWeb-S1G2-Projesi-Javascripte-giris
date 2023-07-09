@@ -104,29 +104,30 @@ Aşağıdakileri oyun isimli fonksiyonu kullanarak yap.
 OYUNUN KURALLARI: Makas Kağıdı yener| Kağıt Taşı yener | Taş Makas'ı yener | veya beraberlik olur.
 */
 
-function oyun(oyuncu, bilgisayar) {
-  if (oyun("Kağıt", "Makas")) {
-    console.log("Kaybettin!");
-  } else if (oyun("Makas", "Kağıt")) {
-    console.log("Kazandın!");
-  } else if (oyun("Kağıt", "Taş")) {
-    console.log("Kazandın!");
-  } else if (oyun("Taş", "Kağıt")) {
-    console.log("Kaybettin!");
-  } else if (oyun("Taş", "Makas")) {
-    console.log("Kazandın!");
-  } else if (oyun("Makas", "Taş")) {
-    console.log("Kaybettin!");
-  } else if (oyun("Taş", "Taş")) {
-    console.log("Beraberlik");
-  } else if (oyun("Makas", "Makas")) {
-    console.log("Beraberlik");
-  } else if (oyun("Kağıt", "Kağıt")) {
-    console.log("Beraberlik");
+function oyun(oyuncuT, bilgisayarT) {
+  if (oyuncuT === bilgisayarT) {
+    return "Beraberlik";
+  } else if (oyuncuT === "Taş") {
+    if (bilgisayarT === "Kağıt") {
+      return "Kaybettin!";
+    } else {
+      return "Kazandın!";
+    }
+  } else if (oyuncuT === "Makas") {
+    if (bilgisayarT === "Taş") {
+      return "Kaybettin!";
+    } else {
+      return "Kazandın!";
+    }
+  } else if (oyuncuT === "Kağıt") {
+    if (bilgisayarT === "Makas") {
+      return "Kaybettin!";
+    } else {
+      return "Kazandın!";
+    }
   }
-  return oyun;
 }
-
+//console.log(oyun("Taş", ));
 // Şimdi Taş, Kağıt, Makas oyununu bilgisayara karşı oynayalım!
 /*
 Öncelikle aşağıdakileri yap:
@@ -142,7 +143,17 @@ function oyun(oyuncu, bilgisayar) {
 Şimdi kendi seçtiğin bir seçime karşı bilgisayarın rastgele oluşturduğu seçimi yukarıda yazdığın oyun fonsiyonu ile oynayın ve sonucu console'a yazdırın.
 Örn: console.log(oyun("Makas",bilgisayarinSecimi()))
 */
-
+function bilgisayarinSecimi() {
+  const rastgele = Math.random();
+  if (rastgele < 0.33) {
+    return "Taş";
+  } else if (rastgele < 0.66) {
+    return "Makas";
+  } else {
+    return "Kağıt";
+  }
+}
+console.log(oyun("Makas", bilgisayarinSecimi()));
 /* Görev 4 : Metrik Dönüştürücü */
 
 //Görev 4a - Kilometreden Mil
