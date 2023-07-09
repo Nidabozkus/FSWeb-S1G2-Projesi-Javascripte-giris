@@ -251,10 +251,20 @@ Aşağıdakileri sesliHarfSayaci fonskiyonunda yap.
 İPUCU - .includes() methoduna bakabilirsin. (https://www.w3schools.com/jsref/jsref_includes.asp)
 */
 
-function sesliHarfSayaci(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+function sesliHarfSayaci(cumle) {
+  const sesliHarf = ["a", "e", "ı", "i", "o", "ö", "u", "ü"];
+  let sonuc = 0;
+  for (let i = 0; i < cumle.length; i++) {
+    for (let a = 0; a < sesliHarf.length; a++) {
+      if (cumle[i].includes(sesliHarf[a])) {
+        sonuc++;
+      }
+    }
+  }
+  return sonuc;
 }
 
+console.log(sesliHarfSayaci("seni seviyorum"));
 /* Lütfen bu satırın alt tarafını değiştirmeyin */
 function sa() {
   console.log("Kodlar çalışıyor");
