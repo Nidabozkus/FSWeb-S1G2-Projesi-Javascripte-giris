@@ -200,14 +200,14 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yap:
 */
 
 function cocukSarkisi(maymun) {
-  for (let maymun = 5; maymun > 0; maymun--) {
-    console.log(
-      maymun +
-        " küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!"
-    );
-  }
+  return (
+    maymun +
+    " küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!"
+  );
 }
-cocukSarkisi();
+for (let i = 5; i > 0; i--) {
+  console.log(cocukSarkisi(i));
+}
 
 /* Görev 6 : Not Hesaplayıcı */
 
