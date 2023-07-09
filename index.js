@@ -164,11 +164,11 @@ Aşağdaki milDonusturucu fonksiyonunu aşağıdakileri kullanarak tamamla:
 3. Mil değerini geri dönün
 */
 
-function milDonusturucu(Kilometre) {
-  const mil = Kilometre * 0.621;
+function milDonusturucu(kilometre) {
+  const mil = kilometre * 0.621371;
   return mil;
 }
-//console.log(milDonusturucu(15));
+console.log(milDonusturucu(15));
 
 //Görev 4b - Santimetreden Feet
 /*
@@ -181,10 +181,10 @@ Google'da arama ipucu: "feet cm dönüştürme"
 */
 
 function feetDonusturucu(Santimetre) {
-  const feet = Santimetre * 0.0328;
+  const feet = Santimetre / 30.48;
   return feet;
 }
-//console.log(feetDonusturucu(200));
+console.log(feetDonusturucu(200));
 
 /* Görev 5 : 5 küçük maymun yatakta zıplamış şarkısını çocuklar için hazırladığımı varsayalım. https://www.youtube.com/watch?v=e4EJ34xnlxk */
 
