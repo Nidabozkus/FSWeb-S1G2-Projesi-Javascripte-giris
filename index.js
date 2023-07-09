@@ -228,18 +228,16 @@ function notHesapla(not) {
   if (not >= 90 && not <= 100) {
     return "A aldın";
   } else if (not >= 80 && not <= 89) {
-    console.log("B aldin");
+    return "B aldın";
   } else if (not >= 70 && not <= 79) {
-    console.log("C aldin");
+    return "C aldın";
   } else if (not >= 60 && not <= 69) {
-    console.log("D aldin");
+    return "D aldın";
   } else {
-    console.log("F aldin");
+    return "F aldın";
   }
-
-  return not;
 }
-notHesapla(75);
+console.log(notHesapla(75));
 //notHesapla(100);
 
 /* Bonus Çalışma: Sesli harf sayacı - Kaç tane sesli harf var? */
