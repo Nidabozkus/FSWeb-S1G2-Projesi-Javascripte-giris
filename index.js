@@ -21,9 +21,9 @@ Aşağıdakileri yap:
 */
 const surucuYasi = 25;
 if (surucuYasi > 18) {
-  console.log("true");
+  console.log("1a", true);
 } else {
-  console.log("false");
+  console.log("1a", false);
 }
 
 /*
@@ -37,14 +37,14 @@ Aşağıdakileri yap:
 
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
-let birinciDeger = 25;
+let birinciDeger = 45;
 let ikinciDeger = 35;
 
 if (birinciDeger < ikinciDeger) {
-  birinciDeger = birinciDeger + 2;
-  console.log(birinciDeger);
+  birinciDeger = +2;
+  console.log("1b: ", birinciDeger);
 } else {
-  console.log("kosul saglanamadi");
+  console.log("1b: ", "kosul saglanamadi");
 }
 
 /*
@@ -58,7 +58,7 @@ Aşağıdakileri yap:
    İPUCU: Number metoduna bakabilirsin
 */
 const x = "1999";
-console.log(Number(x));
+console.log("1c: ", Number(x));
 
 /*
 Görev 1d - Çarpma
@@ -73,7 +73,7 @@ function carpma(a, b) {
   const carpma = a * b;
   return carpma;
 }
-console.log(carpma(7, 4));
+console.log("1d: ", carpma(7, 4));
 
 /* Görev 2 : Köpeğin Yaşı */
 
@@ -88,7 +88,7 @@ function kopeginYasi(yas) {
   const kopeginYasi = yas * 7;
   return kopeginYasi;
 }
-//console.log(kopeginYasi(5));
+console.log("2.Görev: ", kopeginYasi(5));
 
 /* Görev 3 */
 /*
@@ -215,18 +215,20 @@ Aşağdakileri notHesapla fonksiyonunda yap.
 
 function notHesapla(not) {
   if (not >= 90 && not <= 100) {
-    console.log("A aldin");
+    return "A aldın";
   } else if (not >= 80 && not <= 89) {
     console.log("B aldin");
   } else if (not >= 70 && not <= 79) {
     console.log("C aldin");
   } else if (not >= 60 && not <= 69) {
     console.log("D aldin");
-  } else if (not < 69) {
+  } else {
     console.log("F aldin");
   }
+
   return not;
 }
+notHesapla(75);
 //notHesapla(100);
 
 /* Bonus Çalışma: Sesli harf sayacı - Kaç tane sesli harf var? */
